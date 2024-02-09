@@ -7,11 +7,11 @@ NAMESPACE=default
 SECRET_COUNT=10
 
 for i in $(seq 1 $SECRET_COUNT); do
-  # Generál egy random stringet a szekret nevének és tartalmának
+  # Generál egy random stringet a secret nevének és tartalmának
   SECRET_NAME="random-secret-$i"
   RANDOM_VALUE=$(openssl rand -base64 32)
 
-  # Létrehoz egy szekretet a generált értékekkel
+  # Létrehoz egy secret a generált értékekkel
   kubectl create secret generic $SECRET_NAME --from-literal=password=$RANDOM_VALUE -n $NAMESPACE
   
   echo "Secret $SECRET_NAME created with random value."
