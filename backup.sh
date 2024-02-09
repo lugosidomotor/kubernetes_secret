@@ -3,7 +3,7 @@
 backup_secret() {
   local namespace="$1"
   local secret_name="$2"
-  local backup_secret_name="${secret_name}.backup
+  local backup_secret_name="${secret_name}.backup"
 
   echo "Új backup secret létrehozása: $backup_secret_name"
   kubectl get secret "$secret_name" -n "$namespace" -o yaml |
