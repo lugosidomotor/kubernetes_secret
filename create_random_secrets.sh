@@ -3,7 +3,7 @@
 # A namespace beállítása, ahol a szekrétek létre lesznek hozva
 NAMESPACE=default
 
-# A szekrétek száma
+# A secretek száma
 SECRET_COUNT=10
 
 for i in $(seq 1 $SECRET_COUNT); do
