@@ -3,8 +3,7 @@
 backup_secret() {
   local namespace="$1"
   local secret_name="$2"
-  local date_stamp=$(date +%Y%m%d%H%M%S) # Időbélyeg hozzáadása
-  local backup_secret_name="${secret_name}.backup.${date_stamp}" # Egyedi backup neve
+  local backup_secret_name="${secret_name}.backup
 
   # Új backup secret létrehozása anélkül, hogy törölnénk a régit
   echo "Új backup secret létrehozása: $backup_secret_name"
